@@ -1,7 +1,5 @@
 ﻿using Discord.Commands;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ChooseBot.Modules
@@ -17,7 +15,7 @@ namespace ChooseBot.Modules
         {
             string[] split = choices.Split(',');
 
-            await ReplyAsync(split[rnd.Next(split.Length)]);
+            await ReplyAsync(split[rnd.Next(split.Length)].Trim());
         }
     }
 }
